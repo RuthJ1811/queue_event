@@ -7,8 +7,8 @@ window.addEventListener('message', function (eventData) {
                 const queue_position = event.data.data.queue_position;
                 const estimated_time = event.data.data.estimated_time;
                 var yellowFrame = document.getElementById("ymIframe").contentWindow
-                let src = yellowFrame.document.querySelector('iframe').src
-                console.log(src)
+                yellowFrame.contentWindow.document.querySelector('#circle > div.queue_number').innerHTML = queue_position;
+                yellowFrame.contentWindow.document.querySelector('#estimated_time > div').innerHTML = estimated_time;
             }
         }
     } catch (error) {
