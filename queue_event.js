@@ -6,7 +6,7 @@ window.addEventListener('message', function (eventData) {
                 console.log("Received queued event");
                 const queue_position = event.data.data.queue_position
                 console.log(queue_position, "q postition")
-                var iframe = document.getElementById('ymIframe');
+                var iframe = document.getElementById('iframe');
                 iframe.src = "https://ruthj1811.github.io/queue_webview/?queuePosition=40&estimatedWaitTime=40";
             }
         }
