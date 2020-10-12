@@ -12,7 +12,7 @@ window.addEventListener('message', function (eventData) {
                     queue_message: "queue_message", 
                     queue_position: queue_position, 
                     estimated_time: estimated_time 
-                    },"http://127.0.0.1:5500")
+                    },"https://ruthj1811.github.io/")
             }
         }
     } catch (error) {
