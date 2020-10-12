@@ -3,7 +3,7 @@ window.addEventListener('message', function (eventData) {
         if (JSON.parse(eventData.data)) {
             let event = JSON.parse(eventData.data);
             if (event.event_code === "custom-event" && event.data && event.data.code === "queue_position_updated") {
-                console.log("Received queued event");
+                console.log("queued event received");
                 const queue_position = event.data.data.queue_position;
                 const estimated_time = event.data.data.estimated_time;
                 var yellowFrame = document.getElementById("ymIframe")
