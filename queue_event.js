@@ -4,10 +4,10 @@ window.addEventListener('message', function (eventData) {
             let event = JSON.parse(eventData.data);
             if (event.event_code === "custom-event" && event.data && event.data.code === "queue_position_updated") {
                 console.log("Received queued event");
-                const queue_position = event.data.data.queue_position
-                console.log(queue_position, "q postition")
-                var iframe = document.getElementById('iframe');
-                iframe.src = "https://ruthj1811.github.io/queue_webview/?queuePosition=40&estimatedWaitTime=40";
+                const queue_position = event.data.data.queue_position;
+                const estimated_time = event.data.data.estimated_time;
+                document.querySelector('#circle > div.queue_number').innerHTML = queue_position;
+                document.querySelector('#estimated_time > div').innerHTML = estimated_time;
             }
         }
     } catch (error) {
