@@ -9,7 +9,7 @@ window.addEventListener('message', function (eventData) {
                 var yellowFrame = document.getElementById("ymIframe")
                 console.log("ymiframe done")
                 console.log(yellowFrame)
-                yellowFrame.contentWindow.document.querySelector('#circle > div.queue_number').innerHTML = queue_position;
+                yellowFrame.contentWindow.document.querySelector("iframe").querySelector('#circle > div.queue_number').innerHTML = queue_position;
                 yellowFrame.contentWindow.document.querySelector('#estimated_time > div').innerHTML = estimated_time;
                 console.log("updated !")
             }
