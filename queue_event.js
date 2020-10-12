@@ -5,8 +5,9 @@ window.addEventListener('message', function (eventData) {
             let event = JSON.parse(eventData.data);
             console.log("Received event");
             if (event.event_code === "custom-event" && event.data && event.data.code === "queue_position_updated") {
+                console.log("Received queued event");
                 const queue_position = event.data.data.queue_position
-                console.log(queue_position)
+                console.log(queue_position, "postition")
             }
         }
     } catch (error) {
