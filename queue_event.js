@@ -5,9 +5,9 @@ window.addEventListener('message', function (eventData) {
             if (event.event_code === "custom-event" && event.data && event.data.code === "queue_position_updated") {
                 console.log("Received queued event");
                 const queue_position = event.data.data.queue_position
-                console.log(queue_position, "postition")
+                console.log(queue_position, "q postition")
                 var iframe = document.getElementById('ymIframe');
-                iframe.src = "http://127.0.0.1:5500/queue.html?queuePosition=00&estimatedWaitTime=000";
+                iframe.src = "https://ruthj1811.github.io/queue_webview/?queuePosition=40&estimatedWaitTime=40";
             }
         }
     } catch (error) {
