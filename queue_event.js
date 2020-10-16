@@ -11,6 +11,7 @@ window.addEventListener('message', function (eventData) {
                 [...document.getElementById("ymIframe").contentWindow.document.querySelectorAll("iframe")]
                 .reverse()[1].contentWindow
                 .postMessage({
+                    queue_type: "queue_webview",
                     waitMessage: waitMessage,
                     queue_position: queue_position, 
                     estimated_time: estimated_time ,
