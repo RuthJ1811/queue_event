@@ -11,10 +11,10 @@ window.addEventListener('message', function (eventData) {
                 [...document.getElementById("ymIframe").contentWindow.document.querySelectorAll("iframe")]
                 .reverse()[1].contentWindow
                 .postMessage({
-                    waitMessage: decodeURIComponent(waitMessage),
+                    waitMessage: waitMessage,
                     queue_position: queue_position, 
                     estimated_time: estimated_time ,
-                    estimatedWaitTimeMessage: decodeURIComponent(estimatedWaitTimeMessage)
+                    estimatedWaitTimeMessage: estimatedWaitTimeMessage
                     },"https://ruthj1811.github.io/")
             }
         }
