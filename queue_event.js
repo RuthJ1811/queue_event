@@ -6,12 +6,15 @@ window.addEventListener('message', function (eventData) {
                 console.log("Received queued event");
                 const queue_position = event.data.data.queue_position;
                 const estimated_time = event.data.data.estimated_time;
+                const waitMessage = event.data.data.waitMessage;
+                const estimatedWaitTimeMessage = event.data.data.estimatedWaitTimeMessage;
                 [...document.getElementById("ymIframe").contentWindow.document.querySelectorAll("iframe")]
                 .reverse()[1].contentWindow
                 .postMessage({
-                    queue_message: "queue_message", 
+                    waitMessage: waitMessage, 
                     queue_position: queue_position, 
-                    estimated_time: estimated_time 
+                    estimated_time: estimated_time ,
+                    estimatedWaitTimeMessage: estimatedWaitTimeMessage
                     },"https://ruthj1811.github.io/")
             }
         }
